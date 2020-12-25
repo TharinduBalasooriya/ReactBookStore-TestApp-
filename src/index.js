@@ -1,17 +1,56 @@
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import './index.css'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function BookList(){
+
+  return (<section className='booklist'>
+    This is a BookList
+
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+        <Book></Book>
+
+  </section>
+          
+    
+    ); 
+}
+
+
+const Book = () =>{
+
+  return(
+    <article >
+      <Title></Title>
+      <Image></Image>
+      <Author></Author>
+    </article>
+  );
+}
+const Title = () => <h4>A Promised Land</h4>;
+const Author = () =>{
+
+  return(
+    <div > Barack Obama</div>
+  );
+}
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/41L5qgUW2fL._AC_SX184_.jpg" alt=""/>
+ReactDom.render(<BookList></BookList>,document.getElementById('root'));
+
+
